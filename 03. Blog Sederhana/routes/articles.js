@@ -2,7 +2,7 @@ var models = require('../db/models.js')
 var express = require('express')
 var router = express.Router()
 var bodyParser = require('body-parser')
-
+router.use(bodyParser.json());
 // get all articcle
 router.get('/', async (req,res) =>{
     try{

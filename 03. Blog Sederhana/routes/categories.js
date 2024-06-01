@@ -2,6 +2,7 @@ var models = require('../db/models.js')
 var express = require('express')
 var router = express.Router()
 var bodyParser = require('body-parser')
+router.use(bodyParser.json());
 
 // get all categories
 router.get('/', async (req,res)=>{
