@@ -10,7 +10,7 @@ app.use('/articles',articlesRouter)
 describe('Testing Articles API', () =>{
     it('should return all articles', async()=>{
         const res = await request(app)
-            .get('./articles')
+            .get('/articles')
             .send();
         
         expect(res.statusCode).toEqual(200);
@@ -20,7 +20,7 @@ describe('Testing Articles API', () =>{
     it('shoul get article by id', async()=>{
         const articleId = 1;
         const res = await request(app)
-            .get(`./articles/${articleId}`)
+            .get(`/articles/${articleId}`)
             .send();
         
         expect(res.statusCode).toEqual(200);

@@ -58,7 +58,6 @@ router.delete('/:id', async (req,res)=>{
         } else {
             res.status(404).json({ message: 'Article not found' });
         }
-        res.status(200).json(result.rows)
     }catch(err){
         res.status(500).json({message: err.message})
     }
