@@ -56,7 +56,7 @@ router.delete('/:id', async (req,res)=>{
         } else {
             res.status(404).json('Pelanggan tidak ditemukan')
         }
-    }catch(err){
+    }catch(err){    
         res.status(500).json({message: err.message})
     }
 });
