@@ -15,3 +15,7 @@ app.use('/articles', articlesRouter);
 app.use('/categories', categoriesRouter);
 app.use('/comments', commentsRouter);
 app.use('/tags', tagsRouter);
+
+app.listen(port, () => {
+    console.log('Server is running on port ' + port);
+})
